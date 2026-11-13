@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#6c4df6" />
+  <title>KIDZVERSE — Children's Day Adventure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="intro-screen" id="introScreen">
+    <div class="intro-sparkles">✦　✧　⭐　✦</div>
+    <div class="intro-kids"><span class="intro-kid kid-one">👧🏻</span><span class="intro-kid kid-two">🧒🏽</span><span class="intro-kid kid-three">👦🏻</span></div>
+    <div class="intro-title">WELCOME TO <b>KIDZVERSE!</b></div>
+    <p>Games • Friends • Surprises • Big Smiles</p>
+    <button class="intro-enter" id="introEnter">LET'S PLAY! 🚀</button>
+    <small>A magical playground made just for you</small>
+  </div>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Kidzverse home"><span class="brand-mark">✦</span><span>KIDZ<span>VERSE</span></span></a>
+    <nav>
+      <button class="nav-link active" data-page="home">Home</button>
+      <button class="nav-link" data-page="games">Games</button>
+      <button class="nav-link" data-page="quiz">Quiz</button>
+      <button class="nav-link" data-page="fun">Fun Zone</button>
+      <button class="nav-link" data-page="gifts">Gifts</button><button class="nav-link" data-page="dashboard">Dashboard</button>
+    </nav>
+    <div class="top-score"><span>⭐</span> <b id="headerPoints">0</b> points <span class="coin-chip">🪙 <b id="headerCoins">0</b></span></div>
+  </header>
+
+  <main>
+    <section id="home" class="page active-page">
+      <div class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="pulse"></span> THE HAPPIEST PLACE ON THE INTERNET</div>
+          <h1>Welcome to<br><span>KIDZVERSE!</span></h1>
+          <p class="hero-text">A magical world of games, brainy challenges, giggles and surprise gifts. Your adventure starts here!</p>
+          <div class="name-entry">
+            <label for="playerName">What should we call you?</label>
+            <div class="name-row"><input id="playerName" maxlength="18" placeholder="Enter your name..." /><button class="primary-btn" id="startBtn">Let's Play <span>→</span></button></div>
+            <small id="nameHint">Your name makes the adventure extra special.</small>
+          </div>
+          <div class="hero-stats"><div><b>15+</b><span>Mini games</span></div><i></i><div><b>3,000+</b><span>Quiz variations</span></div><i></i><div><b>∞</b><span>Fun moments</span></div></div>
+        </div>
+        <div class="hero-art">
+          <div class="sunburst"></div><div class="float-star star-a">✦</div><div class="float-star star-b">✧</div>
+          <div class="planet planet-one"></div><div class="planet planet-two"></div>
+          <div class="mascot"><div class="mascot-ear left"></div><div class="mascot-ear right"></div><div class="mascot-face"><div class="eyes"><i></i><i></i></div><div class="cheeks"><i></i><i></i></div><div class="smile"></div></div><div class="mascot-body"></div></div>
+          <div class="hero-sticker sticker-top">LET'S HAVE<br>FUN! 🎈</div><div class="hero-sticker sticker-bottom">100% SMILES</div>
+        </div>
+      </div>
+      <div class="section-heading"><div><span class="eyebrow">YOUR ADVENTURE MAP</span><h2>Pick your fun zone</h2></div><span class="heading-note">Choose a portal and jump in ✨</span></div>
+      <div class="portal-grid">
+        <button class="portal-card purple" data-go="games"><span class="portal-icon">🎮</span><span class="portal-title">Games Zone</span><span class="portal-desc">Play, think & collect points</span><span class="portal-arrow">↗</span></button>
+        <button class="portal-card orange" data-go="quiz"><span class="portal-icon">🧠</span><span class="portal-title">Quiz Challenge</span><span class="portal-desc">Show what your brain can do</span><span class="portal-arrow">↗</span></button>
+        <button class="portal-card pink" data-go="fun"><span class="portal-icon">😂</span><span class="portal-title">Giggle Garden</span><span class="portal-desc">Jokes, wishes & fun facts</span><span class="portal-arrow">↗</span></button>
+        <button class="portal-card green" data-go="gifts"><span class="portal-icon">🎁</span><span class="portal-title">Gift Galaxy</span><span class="portal-desc">Unlock a little surprise</span><span class="portal-arrow">↗</span></button>
+      </div>
+      <div class="mini-challenge"><div><span class="eyebrow">TODAY'S MISSION</span><h3>Play 3 games and collect 50 stars! ⭐</h3><p>Every challenge brings you closer to a legendary gift.</p></div><button class="secondary-btn" data-go="games">Start mission ↗</button></div>
+      <div class="welcome-strip"><span class="strip-emoji">🌈</span><div><b>Happy Children's Day!</b><p>Keep being curious, kind and wonderfully YOU.</p></div><span class="strip-sparkle">✦ ✧ ✦</span></div>
+    </section>
+
+    <section id="games" class="page">
+      <div class="page-heading"><div><span class="eyebrow">PLAY • EXPLORE • WIN</span><h1>Games <span>Zone</span></h1><p>Choose a game and collect stars as you play.</p></div><div class="page-emoji">🕹️</div></div>
+      <div class="game-tabs" id="gameTabs">
+        <button class="game-tab selected" data-game="number">🔢 Number Guess</button><button class="game-tab" data-game="rps">✊ Rock Paper Scissors</button><button class="game-tab" data-game="memory">🃏 Memory Match</button><button class="game-tab" data-game="scramble">🔤 Word Scramble</button><button class="game-tab" data-game="stars">⭐ Star Catcher</button><button class="game-tab" data-game="math">➕ Math Blast</button><button class="game-tab" data-game="color">🎨 Color Match</button><button class="game-tab" data-game="ttt">⭕ Tic Tac Toe</button><button class="game-tab" data-game="typing">⌨️ Typing Dash</button><button class="game-tab" data-game="mole">🐹 Whack-a-Mole</button><button class="game-tab" data-game="reaction">⚡ Reaction Rush</button><button class="game-tab" data-game="odd">🕵️ Odd One Out</button><button class="game-tab" data-game="pattern">🧩 Pattern Genius</button><button class="game-tab" data-game="balloon">🎈 Balloon Pop</button><button class="game-tab" data-game="emoji">😀 Emoji Quiz</button>
+      </div>
+      <div class="game-panel" id="gamePanel"></div>
+    </section>
+
+    <section id="quiz" class="page">
+      <div class="page-heading"><div><span class="eyebrow">THINK • ANSWER • SHINE</span><h1>Quiz <span>Challenge</span></h1><p>Pick a topic, beat the timer and earn brainy badges.</p></div><div class="page-emoji">🏆</div></div>
+      <div class="quiz-categories"><button class="quiz-category selected" data-category="general">🌍 General Knowledge</button><button class="quiz-category" data-category="science">🔬 Science</button><button class="quiz-category" data-category="computer">💻 Computer</button></div>
+      <div class="quiz-card" id="quizCard"></div>
+    </section>
+
+    <section id="fun" class="page">
+      <div class="page-heading"><div><span class="eyebrow">SMILES ARE CONTAGIOUS</span><h1>Giggle <span>Garden</span></h1><p>A little laughter and a whole lot of love for Children's Day.</p></div><div class="page-emoji">🌻</div></div>
+      <div class="fun-grid">
+        <div class="fun-card joke-card"><div class="fun-card-top"><span>🤣</span><small>JOKE OF THE MOMENT</small></div><h2 id="jokeText">Why did the student eat his homework? Because the teacher said it was a piece of cake!</h2><button class="secondary-btn" id="newJoke">Tell me another <span>↻</span></button></div>
+        <div class="fun-card wish-card"><div class="fun-card-top"><span>💌</span><small>A SPECIAL WISH</small></div><h2>Dream big, laugh loudly and never stop being curious!</h2><p>May your world always be full of colour, friendship and magical little moments.</p><div class="wish-sign">— Team KIDZVERSE 💜</div></div>
+      </div>
+      <div class="facts-section"><div class="section-heading"><div><span class="eyebrow">DID YOU KNOW?</span><h2>Fun facts to amaze you</h2></div><button class="text-btn" id="nextFact">Next fact ↗</button></div><div class="fact-card"><span>💡</span><p id="factText">Octopuses have three hearts!</p></div></div>
+    </section>
+
+    <section id="gifts" class="page">
+      <div class="page-heading"><div><span class="eyebrow">A LITTLE MAGIC FOR YOU</span><h1>Gift <span>Galaxy</span></h1><p>Choose a mystery box. Unlock characters, rides, gems and virtual coins!</p></div><div class="page-emoji">🎁</div></div>
+      <div class="gift-intro"><span>✨</span><div><b>Your surprise is waiting!</b><p>Collect points, unlock gifts and become a KIDZVERSE champion.</p></div><span class="gift-points">⭐ <b id="giftPoints">0</b> points</span></div>
+      <div class="daily-bonus"><div><span>🌞 DAILY LOGIN BONUS</span><b>Come back every day for 20 free coins!</b><small id="dailyStatus">Your daily surprise is ready.</small></div><button class="action-btn" id="dailyBonusBtn">Claim +20 🪙</button></div>
+      <div class="reward-progress"><div><b>🎯 Gift unlock progress</b><span id="giftProgressText">0 / 100 points</span></div><div class="progress"><span id="giftProgressBar" style="width:0%"></span></div><small>Reach 100 points to unlock the Golden Treasure Chest!</small></div>
+      <div class="gift-grid" id="giftGrid"><button class="gift-box" data-gift="0"><span>🎁</span><b>Mystery Box 01</b><small>Tap to open</small></button><button class="gift-box" data-gift="1"><span>🎀</span><b>Mystery Box 02</b><small>Tap to open</small></button><button class="gift-box" data-gift="2"><span>🧸</span><b>Mystery Box 03</b><small>Tap to open</small></button></div>
+      <div class="gift-result" id="giftResult" hidden></div>
+      <p class="gift-footnote">One virtual surprise per playthrough. Rewards stay in your browser collection — no real cash or physical delivery. 💫</p>
+    </section>
+
+    <section id="dashboard" class="page">
+      <div class="page-heading"><div><span class="eyebrow">YOUR LITTLE HALL OF FAME</span><h1>Player <span>Dashboard</span></h1><p>Look how much fun you've had!</p></div><div class="page-emoji">🏅</div></div>
+      <div class="player-banner"><div class="avatar">🧑‍🚀</div><div><small>ADVENTURER</small><h2 id="dashName">Little Explorer</h2><p>Official KIDZVERSE fun champion</p></div><div class="level-pill">⭐ Level <b id="levelNum">1</b></div></div><div class="level-progress-card"><div><b>🚀 Your next level</b><span id="levelProgressText">0 / 50 XP</span></div><div class="level-track"><span id="levelProgressBar"></span></div><small>Keep playing to unlock your next level!</small></div>
+      <div class="dashboard-stats"><div class="dash-stat"><span>⭐</span><b id="dashPoints">0</b><small>Total points</small></div><div class="dash-stat"><span>🪙</span><b id="dashCoins">0</b><small>Coins</small></div><div class="dash-stat"><span>🎮</span><b id="dashGames">0</b><small>Games played</small></div><div class="dash-stat"><span>🧠</span><b id="dashQuiz">0</b><small>Quiz answers</small></div><div class="dash-stat"><span>🏆</span><b id="dashBadges">0</b><small>Achievements</small></div></div>
+      <div class="achievement-card"><div class="section-heading"><div><span class="eyebrow">COLLECT THEM ALL</span><h2>Your achievements</h2></div></div><div class="badges" id="badges"><div class="achievement locked">🌟<span>First steps</span></div><div class="achievement locked">🎯<span>Quiz whiz</span></div><div class="achievement locked">🎮<span>Game explorer</span></div><div class="achievement locked">🎁<span>Gift opener</span></div></div></div>
+    </section>
+  </main>
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">✦</span><span>KIDZ<span>VERSE</span></span></a><p>Made with 💜 for every curious kid. Happy Children's Day!</p><button class="dashboard-link" data-go="dashboard">My Dashboard ↗</button></footer>
+  <div class="toast" id="toast"></div>
+  <div class="confetti-layer" id="confettiLayer"></div>
+  <script src="script.js"></script>
+</body>
+</html>
